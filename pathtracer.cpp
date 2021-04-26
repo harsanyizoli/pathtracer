@@ -1,25 +1,35 @@
 #include <iostream>
 #include <vector>
-#include <cstdint>
+#include <random>
+#include <thread>
+#include <algorithm>
+
+#include "src/utils/types.hpp"
+#include "src/utils/image_write.hpp"
+
+#include "src/utils/camera.hpp"
 
 int main(int argc, char const *argv[])
 {
-    /* code */
-    struct scene
-    {
-        const int width = 2U;
-        const int height = 2U;
-    } scene;
-    typedef struct pixel
-    {
-        uint8_t r;
-        uint8_t g;
-        uint8_t b;
-    } pixel;
     
-    std::vector<pixel> pixels = {};
-    pixels.reserve(scene.width*scene.height);
-    std::cout << sizeof(pixel) << "\n";
+    Config config = {
+        .width = 16U,
+        .height = 9U,
+        .position = {0.0, 0.0, 0.0},
+        .direction = {0.0, 0.0, -1.0}
+    };
+    Camera camera = {};
+    
+    std::vector<pixel> output = {};
+    output.resize(config.width * config.height);
+    std::fill(output.begin(), output.end(), pixel{230, 35, 232});
+
+    for(int i = 0; i < config.width; i++){
+        for(int j = 0; j < config.height; j++){
+
+        }
+    }
+    write_image_blocking("output.png", config.width, config.height, 3, static_cast<void*>(output.data()), config.width * sizeof(pixel));
+    std::cout << std::thread::hardware_concurrency() << "\n";
     return 0;
 }
-
