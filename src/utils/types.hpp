@@ -12,6 +12,6 @@ typedef struct pixel
 typedef struct Config {
     int width;
     int height;
-    vec3 position;
-    vec3 direction;
+    vec3f position;
+    vec3f direction;
 } Config;

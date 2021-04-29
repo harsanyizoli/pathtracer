@@ -30,6 +30,8 @@ int main(int argc, char const *argv[])
         }
     }
     write_image_blocking("output.png", config.width, config.height, 3, static_cast<void*>(output.data()), config.width * sizeof(pixel));
-    std::cout << std::thread::hardware_concurrency() << "\n";
+    vec3i i = {15, 35, 22};
+    std::cout << i.x << " " << i.r << "\n";
+    
     return 0;
 }

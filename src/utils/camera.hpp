@@ -5,12 +5,9 @@
 
 struct Camera
 {
-    vec3 position;
-    vec3 direction;
+    vec3f position;
+    vec3f direction;
     float aspect;
-    Camera(){
-
-    }
 };
 
 Camera* init_camera(Config* config);
