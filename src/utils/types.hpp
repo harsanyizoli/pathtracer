@@ -14,4 +14,5 @@ typedef struct Config {
     int height;
     vec3f position;
     vec3f direction;
+    int max_recursions;
 } Config;

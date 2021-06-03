@@ -1,5 +1,22 @@
 #pragma once
 
+
+/*
+
+vec + vec
+vec + s
+
+vec - vec
+vec - s
+
+vec * vec
+vec * s
+
+vec / vec
+vec / s
+
+ 
+*/
 template <typename T>
 struct vec3
 {

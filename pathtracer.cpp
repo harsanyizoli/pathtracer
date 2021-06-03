@@ -16,7 +16,8 @@ int main(int argc, char const *argv[])
         .width = 16U,
         .height = 9U,
         .position = {0.0, 0.0, 0.0},
-        .direction = {0.0, 0.0, -1.0}
+        .direction = {0.0, 0.0, -1.0},
+        .max_recursions = 4
     };
     Camera camera = {};
     
